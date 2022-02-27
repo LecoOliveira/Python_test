@@ -1,7 +1,7 @@
 import socket
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.settimeout(1)
+client.settimeout(2)
 
 try:
     client.connect(("google.com", 80))
