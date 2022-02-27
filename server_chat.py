@@ -3,8 +3,8 @@ import socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
 
-ip = "0.0.0.0"
-port = 2000
+ip = "0.0.0.0" #listen to all IP or choice IP address
+port = 2000    #choice port 
 
 try:
     server.bind((ip, port))
