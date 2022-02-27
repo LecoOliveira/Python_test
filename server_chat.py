@@ -18,7 +18,7 @@ try:
 
     (client_socket, address) = server.accept()
     print "Connected from: " + str(address[0])
-    client_socket.send("(type 'exit' for stop the chat) or type your message: ")
+    client_socket.send("(type 'exit' for stop the chat) or type your msgssage: ")
     while True:
         data = client_socket.recv(1024)
         print "Client: " + data
@@ -27,14 +27,14 @@ try:
             break
             server.close()
         else:
-            me = raw_input("You: " ) + "\n"
+            msg = raw_input("You: " ) + "\n"
             print "\n" 
                 
-            if me == "exit\n":
+            if msg == "exit\n":
                 break
                 server.close()
             else:
-                client_socket.send("Server: " + me)
+                client_socket.send("Server: " + msg)
             
             
 
