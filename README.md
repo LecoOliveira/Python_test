@@ -1,2 +1,2 @@
 # Python_test
-Primeiros códigos em pyrhon.
+Primeiros códigos em python.
