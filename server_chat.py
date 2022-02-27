@@ -1,3 +1,8 @@
+#!/usr/bin/python
+# Coded by: Alex Rocha
+# Contact: lecoverde10@gmail.com
+#
+
 import socket
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
