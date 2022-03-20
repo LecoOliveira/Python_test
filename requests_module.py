@@ -12,4 +12,4 @@ try:
             print url + line + str(response_http.status_code)
 
 except KeyboardInterrupt:
-    print 'End program.'
+    print '\nEnd program.'
