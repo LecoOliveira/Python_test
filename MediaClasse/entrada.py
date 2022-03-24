@@ -4,7 +4,7 @@
 def entrada_nota(notas):
     controle = 1
     while controle < 5:
-       notas.append(input("Informe a " + str(controle) + "° nota: "))
+       float(notas.append(input("Informe a " + str(controle) + "° nota: ")))
        controle += 1
     
         
