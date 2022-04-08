@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+# Coded by: Alex Rocha
+# Contact: lecoverde10@gmail.com
+#
 
 import base64
 import hashlib
