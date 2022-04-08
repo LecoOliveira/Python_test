@@ -2,6 +2,8 @@
 # Coded by: Alex Rocha
 # Contact: lecoverde10@gmail.com
 #
+#Usage: Python3 hash_generator.py
+#
 
 import base64
 import hashlib
