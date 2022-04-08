@@ -29,13 +29,13 @@ def main():
         title()
         options = int(input("\nSelect the option: "))
         
-        clear()
         time.sleep(1)
         if options < 1 or options > 6:
             print("Invalid option\n")
             continue
 
         elif options == 1:
+            clear()
             result = hashlib.sha1(string.encode('utf-8'))
             print(f"\nSHA1: {result.hexdigest()}")
             print()
@@ -54,6 +54,7 @@ def main():
                 break
 
         elif options == 2:
+            clear()
             result = hashlib.sha256(string.encode('utf-8'))
             print(f"\nSHA256: {result.hexdigest()}")
             print()
@@ -72,6 +73,7 @@ def main():
                 break
 
         elif options == 3:
+            clear()
             result = hashlib.md5(string.encode('utf-8'))
             print(f"\nMD5: {result.hexdigest()}")
             print()
@@ -90,6 +92,7 @@ def main():
                 break
 
         elif options == 4:
+            clear()
             result = hashlib.sha512(string.encode('utf-8'))
             print(f"\nSHA512: {result.hexdigest()}")
             print()
@@ -108,6 +111,7 @@ def main():
                 break
 
         elif options == 5:
+            clear()
             result = base64.b64encode(string.encode('utf-8'))
             result_encoded = result.decode('utf-8')
             print(f"\nBase64: {result_encoded}")
@@ -127,6 +131,9 @@ def main():
                 break
 
         elif options == 6:
+            print("End program.")
+            time.sleep(1)
+            clear()
             break
 
 if __name__ == '__main__':
