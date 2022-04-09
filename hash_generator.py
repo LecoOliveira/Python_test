@@ -20,10 +20,11 @@ def clear():
 
 
 def title():
-    print('''\n============ CHOOSE HASH TYPE ============
-[1] SHA1        [3] MD5         [5] Base64
-[2] SHA256      [4] SHA512      [6] Exit
-==========================================\n''')
+    print('''\n========================================
+=========== CHOOSE HASH TYPE ===========
+  [1] SHA1     [3] MD5      [5] Base64
+  [2] SHA256   [4] SHA512   [6] Exit
+========================================''')
 
 
 def cont():
@@ -38,9 +39,10 @@ def cont():
         print('End Program.')
         key = False
     else:
-        print()
-        print('Invalid option.')
-        key = False
+        clear()
+        print('INVALID OPTION')
+        print('(Type y or n)\n')
+        return cont()
 
 
 def main():
@@ -115,6 +117,7 @@ def main():
         
 
 if __name__ == '__main__':
+    
     try:
         main()
     except ValueError:
