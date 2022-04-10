@@ -29,11 +29,11 @@ def title():
 
 def cont():
     key = True
-    repeat = input('Do you want to encript another text (y/n)? ')
-    if repeat.lower() == 'y':
+    repeat = input('Do you want to encript another text (y/n)? ').lower()
+    if repeat == 'y':
         clear()
         return key
-    elif repeat.lower() == 'n':
+    elif repeat == 'n':
         print()
         time.sleep(0.5)
         print('End Program.')
