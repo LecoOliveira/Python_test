@@ -10,7 +10,6 @@ from functions import *
 
 
 try:
-
     clear()
     while True:
         string = input('Type the text to be encoded: ')
