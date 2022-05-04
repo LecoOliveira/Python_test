@@ -31,4 +31,5 @@ def calculo_digito2(cpf_usavel):
     soma_cpf_usavel = sum(numeros_multiplicados)
 
     calculo = 11 - (soma_cpf_usavel % 11)
+    cpf_usavel.pop()
     return calculo

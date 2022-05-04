@@ -9,7 +9,6 @@ while True:
         cpf = [int(x) for x in str(cpf_user)] 
         *cpf_usavel, digito_1, digito_2 = cpf
         digitos =  [calculo_digito1(cpf_usavel), calculo_digito2(cpf_usavel)]
-        cpf_usavel.pop()
         cpf_novo = cpf_usavel + digitos
         sequencia = ''.join(map(str, cpf_novo)) == str(cpf_novo[0]) * 11
 
