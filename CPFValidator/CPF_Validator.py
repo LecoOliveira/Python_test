@@ -26,5 +26,5 @@ while True:
             continue
 
     except KeyboardInterrupt:
-        print('\nFim do programa. \nObrigado!')
+        print('\n\nFim do programa. \nObrigado!')
         break
