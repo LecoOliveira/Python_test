@@ -1,4 +1,5 @@
-''' Exercício consiste em achar o primeiro número repetido em uma lista,
+''' Exercício consiste em criar uma função que ache
+o primeiro número repetido em uma lista,
 caso a lista não contenha, retornar -1.'''
 
 liste_de_listas_de_inteiros = [
