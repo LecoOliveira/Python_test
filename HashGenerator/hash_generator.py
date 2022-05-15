@@ -36,14 +36,14 @@ try:
                 break
 
         elif options == 3:
-            md5_convert(string)
+            sha512_convert(string)
             if cont():
                 continue
             else:
                 break
 
         elif options == 4:
-            sha512_convert(string)
+            md5_convert(string)
             if cont():
                 continue
             else:
