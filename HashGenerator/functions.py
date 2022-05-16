@@ -1,13 +1,14 @@
-import os
-import time
+from os import system, name
+from time import sleep
+from convert import *
 
 
 def clear():
 
-    if os.name == 'nt':
-        os.system('cls')
+    if name == 'nt':
+        system('cls')
     else:
-        os.system('clear')
+        system('clear')
 
 
 def title():
@@ -25,17 +26,46 @@ def title():
 def cont():
     key = True
     repeat = input('Do you want to encript another text (y/n)? ').lower()
+    
     if repeat == 'y':
         clear()
-        return key
+        return key 
+
     elif repeat == 'n':
-        print()
-        time.sleep(0.5)
-        print('End Program.')
+        sleep(0.5)
+        print('\nEnd Program.')
         key = False
+    
     else:
         clear()
-        print('INVALID OPTION')
-        print('(Type y or n)\n')
+        print(
+            'INVALID OPTION',
+            '\n(Type y or n)\n'
+        )
+        
         return cont()
+
+def choose_conversion(string):
+
+    options = int(input('Select the option: '))
+    sleep(1)
+
+    while options < 1 or options > 6:
+        print('\nInvalid option')
+        options = int(input('Type a number between 1 and 6: '))
+    
+    if options == 6:
+        print('End program.')
+        sleep(1)
+        clear()
+        return exit()
+
+    convert = {
+        1: lambda string: sha1_convert(string),
+        2: lambda string: sha256_convert(string),
+        3: lambda string: sha512_convert(string),
+        4: lambda string: md5_convert(string),
+        5: lambda string: base64_convert(string)
+    }
+    return convert[options](string)
 

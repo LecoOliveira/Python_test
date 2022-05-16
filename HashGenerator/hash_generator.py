@@ -8,66 +8,52 @@
 from convert import *
 from functions import *
 
+def choose_conversion(string):
 
-try:
-    clear()
-    while True:
-        string = input('Type the text to be encoded: ')
-        title()
-        options = int(input('\nSelect the option: '))
-        
-        time.sleep(1)
-        while options < 1 or options > 6:
-            print('\nInvalid option')
-            options = int(input('Type a number between 1 and 6: '))
+    options = int(input('Select the option: '))
+    sleep(1)
 
-        if options == 1:
-            sha1_convert(string)
-            if cont():
-                continue
-            else:
-                break           
+    while options < 1 or options > 6:
+        print('\nInvalid option')
+        options = int(input('Type a number between 1 and 6: '))
+    
+    if options == 6:
+        print('End program.')
+        sleep(1)
+        clear()
+        return exit()
 
-        elif options == 2:
-            sha256_convert(string)
-            if cont():
-                continue
-            else:
-                break
+    convert = {
+        1: lambda string: sha1_convert(string),
+        2: lambda string: sha256_convert(string),
+        3: lambda string: sha512_convert(string),
+        4: lambda string: md5_convert(string),
+        5: lambda string: base64_convert(string)
+    }
+    return convert[options](string)
 
-        elif options == 3:
-            sha512_convert(string)
-            if cont():
-                continue
-            else:
-                break
 
-        elif options == 4:
-            md5_convert(string)
-            if cont():
-                continue
-            else:
-                break
+def main():
 
-        elif options == 5:
-            base64_convert(string)
-            if cont():
-                continue
-            else:
-                break
+    try:
+        clear()
+        while True:
+            string = input('Type the text to be encoded: ')
+            title()
+            choose_conversion(string)
+            if not cont():
+                break        
 
-        elif options == 6:
-            print('End program.')
-            time.sleep(1)
-            clear()
-            break
 
-except ValueError:
-    print('\nInvalid character. Type a number between 1 and 6.')
-except Exception as error:
-    print(f'\nError: {str(error)}')
-except KeyboardInterrupt:
-    time.sleep(0.5)
-    print('\n\nEnd program!')
+    except ValueError:
+        print('\nInvalid character. Type a number between 1 and 6.')
+    except Exception as error:
+        print(f'\nError: {str(error)}')
+    except KeyboardInterrupt:
+        sleep(0.5)
+        print('\n\nEnd program!')
+
+main()
+
         
     
