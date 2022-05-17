@@ -5,8 +5,8 @@
 # Usage: Python3 hash_generator.py
 #
 
-from convert import *
 from functions import *
+from option import choose_conversion
 
 
 def main():
